@@ -1,0 +1,11 @@
+C:\Users\Jotinha\OneDrive\Documentos\DouglasCollege\Introduction of Programming\BankingRegister\BankingRegister\bin\Debug\BankingRegister.exe.config
+C:\Users\Jotinha\OneDrive\Documentos\DouglasCollege\Introduction of Programming\BankingRegister\BankingRegister\bin\Debug\BankingRegister.exe
+C:\Users\Jotinha\OneDrive\Documentos\DouglasCollege\Introduction of Programming\BankingRegister\BankingRegister\bin\Debug\BankingRegister.pdb
+C:\Users\Jotinha\OneDrive\Documentos\DouglasCollege\Introduction of Programming\BankingRegister\BankingRegister\obj\Debug\BankingRegister.csproj.AssemblyReference.cache
+C:\Users\Jotinha\OneDrive\Documentos\DouglasCollege\Introduction of Programming\BankingRegister\BankingRegister\obj\Debug\BankingRegister.csproj.SuggestedBindingRedirects.cache
+C:\Users\Jotinha\OneDrive\Documentos\DouglasCollege\Introduction of Programming\BankingRegister\BankingRegister\obj\Debug\BankingRegister.Form1_BankingRegister.resources
+C:\Users\Jotinha\OneDrive\Documentos\DouglasCollege\Introduction of Programming\BankingRegister\BankingRegister\obj\Debug\BankingRegister.Properties.Resources.resources
+C:\Users\Jotinha\OneDrive\Documentos\DouglasCollege\Introduction of Programming\BankingRegister\BankingRegister\obj\Debug\BankingRegister.csproj.GenerateResource.cache
+C:\Users\Jotinha\OneDrive\Documentos\DouglasCollege\Introduction of Programming\BankingRegister\BankingRegister\obj\Debug\BankingRegister.csproj.CoreCompileInputs.cache
+C:\Users\Jotinha\OneDrive\Documentos\DouglasCollege\Introduction of Programming\BankingRegister\BankingRegister\obj\Debug\BankingRegister.exe
+C:\Users\Jotinha\OneDrive\Documentos\DouglasCollege\Introduction of Programming\BankingRegister\BankingRegister\obj\Debug\BankingRegister.pdb
