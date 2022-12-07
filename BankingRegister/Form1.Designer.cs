@@ -41,6 +41,9 @@
             this.label_withdraw = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1_titleBankingRegister
@@ -48,7 +51,7 @@
             this.label1_titleBankingRegister.AutoSize = true;
             this.label1_titleBankingRegister.BackColor = System.Drawing.SystemColors.Menu;
             this.label1_titleBankingRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1_titleBankingRegister.Location = new System.Drawing.Point(383, 36);
+            this.label1_titleBankingRegister.Location = new System.Drawing.Point(35, 21);
             this.label1_titleBankingRegister.Name = "label1_titleBankingRegister";
             this.label1_titleBankingRegister.Size = new System.Drawing.Size(147, 20);
             this.label1_titleBankingRegister.TabIndex = 0;
@@ -57,7 +60,7 @@
             // label_Name
             // 
             this.label_Name.AutoSize = true;
-            this.label_Name.Location = new System.Drawing.Point(387, 85);
+            this.label_Name.Location = new System.Drawing.Point(36, 64);
             this.label_Name.Name = "label_Name";
             this.label_Name.Size = new System.Drawing.Size(38, 13);
             this.label_Name.TabIndex = 1;
@@ -66,7 +69,7 @@
             // label_accountNumber
             // 
             this.label_accountNumber.AutoSize = true;
-            this.label_accountNumber.Location = new System.Drawing.Point(387, 124);
+            this.label_accountNumber.Location = new System.Drawing.Point(36, 116);
             this.label_accountNumber.Name = "label_accountNumber";
             this.label_accountNumber.Size = new System.Drawing.Size(90, 13);
             this.label_accountNumber.TabIndex = 2;
@@ -75,7 +78,7 @@
             // label_originalDeposit
             // 
             this.label_originalDeposit.AutoSize = true;
-            this.label_originalDeposit.Location = new System.Drawing.Point(387, 161);
+            this.label_originalDeposit.Location = new System.Drawing.Point(36, 179);
             this.label_originalDeposit.Name = "label_originalDeposit";
             this.label_originalDeposit.Size = new System.Drawing.Size(84, 13);
             this.label_originalDeposit.TabIndex = 3;
@@ -83,28 +86,28 @@
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(526, 78);
+            this.textBoxName.Location = new System.Drawing.Point(202, 64);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(100, 20);
             this.textBoxName.TabIndex = 4;
             // 
             // textBoxAccountNumber
             // 
-            this.textBoxAccountNumber.Location = new System.Drawing.Point(526, 117);
+            this.textBoxAccountNumber.Location = new System.Drawing.Point(202, 116);
             this.textBoxAccountNumber.Name = "textBoxAccountNumber";
             this.textBoxAccountNumber.Size = new System.Drawing.Size(100, 20);
             this.textBoxAccountNumber.TabIndex = 5;
             // 
             // textBoxOriginalDeposit
             // 
-            this.textBoxOriginalDeposit.Location = new System.Drawing.Point(526, 153);
+            this.textBoxOriginalDeposit.Location = new System.Drawing.Point(202, 179);
             this.textBoxOriginalDeposit.Name = "textBoxOriginalDeposit";
             this.textBoxOriginalDeposit.Size = new System.Drawing.Size(100, 20);
             this.textBoxOriginalDeposit.TabIndex = 6;
             // 
             // buttonCreateAccount
             // 
-            this.buttonCreateAccount.Location = new System.Drawing.Point(440, 211);
+            this.buttonCreateAccount.Location = new System.Drawing.Point(80, 244);
             this.buttonCreateAccount.Name = "buttonCreateAccount";
             this.buttonCreateAccount.Size = new System.Drawing.Size(117, 23);
             this.buttonCreateAccount.TabIndex = 7;
@@ -115,7 +118,7 @@
             // label_deposit
             // 
             this.label_deposit.AutoSize = true;
-            this.label_deposit.Location = new System.Drawing.Point(384, 296);
+            this.label_deposit.Location = new System.Drawing.Point(568, 64);
             this.label_deposit.Name = "label_deposit";
             this.label_deposit.Size = new System.Drawing.Size(43, 13);
             this.label_deposit.TabIndex = 8;
@@ -124,7 +127,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(355, 331);
+            this.textBox1.Location = new System.Drawing.Point(540, 116);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 9;
@@ -133,7 +136,7 @@
             // label_withdraw
             // 
             this.label_withdraw.AutoSize = true;
-            this.label_withdraw.Location = new System.Drawing.Point(589, 296);
+            this.label_withdraw.Location = new System.Drawing.Point(693, 64);
             this.label_withdraw.Name = "label_withdraw";
             this.label_withdraw.Size = new System.Drawing.Size(52, 13);
             this.label_withdraw.TabIndex = 10;
@@ -142,7 +145,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(554, 331);
+            this.textBox2.Location = new System.Drawing.Point(688, 116);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 11;
@@ -150,7 +153,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(437, 386);
+            this.button1.Location = new System.Drawing.Point(610, 179);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 23);
             this.button1.TabIndex = 12;
@@ -158,12 +161,39 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Visible = false;
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(358, 64);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 13;
+            this.textBox3.Visible = false;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(358, 116);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 14;
+            this.textBox4.Visible = false;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(358, 179);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 15;
+            this.textBox5.Visible = false;
+            // 
             // Form1_BankingRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label_withdraw);
@@ -200,6 +230,9 @@
         private System.Windows.Forms.Label label_withdraw;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }
 

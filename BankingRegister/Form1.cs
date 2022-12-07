@@ -24,7 +24,14 @@ namespace BankingRegister
 
         private void buttonCreateAccount_Click(object sender, EventArgs e)
         {
-            Customer customer= new Customer();
+            textBox3.Text = textBoxName.Text;
+            textBox3.Visible = true;
+
+            textBox4.Text = textBoxAccountNumber.Text;
+            textBox4.Visible = true;
+
+            textBox5.Text = (textBoxOriginalDeposit.Text);
+            textBox5.Visible = true;
 
 
         }
