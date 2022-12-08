@@ -47,25 +47,20 @@ namespace BankingRegister
             set { accountBalance = value; }
         }
 
-        public double Deposit(double amount)
+        public void Deposit(double amount)
         {
-            double currency = 0.0;
-
             if (amount < 0 || amount == 0)
             {
                 Console.WriteLine("Just value greater than 0");
             }
             else
             {
-                currency += amount;
+                AccountBalance += amount;
             }
-
-            return currency;
         }
 
-        public double Withdraw(double amount)
+        public void Withdraw(double amount)
         {
-            double currency = 0.0;
 
             if (amount < 0 || amount == 0)
             {
@@ -73,15 +68,13 @@ namespace BankingRegister
             }
             else
             {
-                currency -= amount;
+                AccountBalance -= amount;
             }
-
-            return currency;
         }
 
-        public override string ToString()
-        {
-            return FirstName + LastName;
-        }
+        //public override string ToString()
+        //{
+            
+        //}
     }
 }
