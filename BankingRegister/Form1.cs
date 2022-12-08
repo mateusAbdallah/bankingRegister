@@ -24,14 +24,25 @@ namespace BankingRegister
 
         private void buttonCreateAccount_Click(object sender, EventArgs e)
         {
-            textBox3.Text = textBoxName.Text;
-            textBox3.Visible = true;
+            Customer obj = new Customer();
+            textBox3.Text = obj.FirstName + " " + obj.LastName + ToString();
+            
+            //int x;
+            //if(int.TryParse(textBox4.Text, out x) == false)
+            //{
+            //    MessageBox.Show("invalid input, re-enter a value again");
+            //    textBox4.Focus();
+            //}
+            
 
-            textBox4.Text = textBoxAccountNumber.Text;
-            textBox4.Visible = true;
+            //textBox3.Text = textBoxName.Text;
+            //textBox3.Visible = true;
 
-            textBox5.Text = (textBoxOriginalDeposit.Text);
-            textBox5.Visible = true;
+            //textBox4.Text = textBoxAccountNumber.Text;
+            //textBox4.Visible = true;
+
+            //textBox5.Text = (textBoxOriginalDeposit.Text);
+            //textBox5.Visible = true;
 
 
         }

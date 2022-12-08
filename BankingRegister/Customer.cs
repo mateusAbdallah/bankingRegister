@@ -79,9 +79,9 @@ namespace BankingRegister
             return currency;
         }
 
-        //public override string ToString()
-        //{
-        //    return "Successful Transaction";
-        //}
+        public override string ToString()
+        {
+            return FirstName + LastName;
+        }
     }
 }
