@@ -85,21 +85,21 @@
             // 
             this.textBoxName.Location = new System.Drawing.Point(202, 64);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(100, 20);
+            this.textBoxName.Size = new System.Drawing.Size(147, 20);
             this.textBoxName.TabIndex = 4;
             // 
             // textBoxAccountNumber
             // 
             this.textBoxAccountNumber.Location = new System.Drawing.Point(202, 116);
             this.textBoxAccountNumber.Name = "textBoxAccountNumber";
-            this.textBoxAccountNumber.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAccountNumber.Size = new System.Drawing.Size(147, 20);
             this.textBoxAccountNumber.TabIndex = 5;
             // 
             // textBoxOriginalDeposit
             // 
             this.textBoxOriginalDeposit.Location = new System.Drawing.Point(202, 179);
             this.textBoxOriginalDeposit.Name = "textBoxOriginalDeposit";
-            this.textBoxOriginalDeposit.Size = new System.Drawing.Size(100, 20);
+            this.textBoxOriginalDeposit.Size = new System.Drawing.Size(147, 20);
             this.textBoxOriginalDeposit.TabIndex = 6;
             // 
             // buttonCreateAccount

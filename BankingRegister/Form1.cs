@@ -24,27 +24,57 @@ namespace BankingRegister
 
         private void buttonCreateAccount_Click(object sender, EventArgs e)
         {
+            int numberAccount = 0;
+            string[] name = new string[2];
+            double originalDeposit = 0.0;
+
+            while(int.TryParse(textBoxAccountNumber.Text, out numberAccount) == false)
+            {
+                MessageBox.Show("Numeric value should be entered for account number");
+                textBoxAccountNumber.Text = "0";
+                textBoxAccountNumber.Focus();
+            }
+            if(double.TryParse(textBoxOriginalDeposit.Text, out originalDeposit) == false)
+            {
+                MessageBox.Show("Numeric value should be entered for deposit");
+                textBoxOriginalDeposit.Text = "0";
+                textBoxOriginalDeposit.Focus();
+            }
+            name = textBoxName.Text.Split(' ');
+            if(name.Length < 2)
+            {
+                textBoxName.Text = "Please enter full name";
+                textBoxName.Focus();
+            }
+            else
+            {
+                if(numberAccount > 0)
+                {
+                    Customer customer = new Customer(name[0], name[1], numberAccount, originalDeposit);
+                    
+                }
+            }
             //full name
-            var name = textBoxName.Text;
-            var fullName = name.Split(' ');
-            string firstName = fullName[0];
-            string lastName = fullName[1];
+            //var name = textBoxName.Text;
+            //var fullName = name.Split(' ');
+            //string firstName = fullName[0];
+            //string lastName = fullName[1];
 
             //account number
-            int amount = 0;
-            while (int.TryParse(textBoxAccountNumber.Text, out amount) == false)
-            {
-                MessageBox.Show("Invalid input, enter value again");
-                textBoxAccountNumber.Focus();
-            }
+            //int amount = 0;
+            //while (int.TryParse(textBoxAccountNumber.Text, out amount) == false)
+            //{
+            //    MessageBox.Show("Invalid input, enter value again");
+            //    textBoxAccountNumber.Focus();
+            //}
 
             //original deposit
-            double originalDeposit = 0.0;
-            while (double.TryParse(textBoxOriginalDeposit.Text, out originalDeposit) == false)
-            {
-                MessageBox.Show("Invalid input, enter value again");
-                textBoxAccountNumber.Focus();
-            }
+            //double originalDeposit = 0.0;
+            //while (double.TryParse(textBoxOriginalDeposit.Text, out originalDeposit) == false)
+            //{
+            //    MessageBox.Show("Invalid input, enter value again");
+            //    textBoxAccountNumber.Focus();
+            //}
 
             //textBox3.Text = obj.FirstName + " " + obj.LastName;
             //textBox3.Text = textBoxName.Text;
