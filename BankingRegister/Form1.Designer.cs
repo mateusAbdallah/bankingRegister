@@ -37,9 +37,9 @@
             this.textBoxOriginalDeposit = new System.Windows.Forms.TextBox();
             this.buttonCreateAccount = new System.Windows.Forms.Button();
             this.label_deposit = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDeposit = new System.Windows.Forms.TextBox();
             this.label_withdraw = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtWithdraw = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -122,13 +122,13 @@
             this.label_deposit.Text = "Deposit";
             this.label_deposit.Visible = false;
             // 
-            // textBox1
+            // txtDeposit
             // 
-            this.textBox1.Location = new System.Drawing.Point(433, 116);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 9;
-            this.textBox1.Visible = false;
+            this.txtDeposit.Location = new System.Drawing.Point(433, 116);
+            this.txtDeposit.Name = "txtDeposit";
+            this.txtDeposit.Size = new System.Drawing.Size(100, 20);
+            this.txtDeposit.TabIndex = 9;
+            this.txtDeposit.Visible = false;
             // 
             // label_withdraw
             // 
@@ -140,13 +140,13 @@
             this.label_withdraw.Text = "Withdraw";
             this.label_withdraw.Visible = false;
             // 
-            // textBox2
+            // txtWithdraw
             // 
-            this.textBox2.Location = new System.Drawing.Point(594, 116);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 11;
-            this.textBox2.Visible = false;
+            this.txtWithdraw.Location = new System.Drawing.Point(594, 116);
+            this.txtWithdraw.Name = "txtWithdraw";
+            this.txtWithdraw.Size = new System.Drawing.Size(100, 20);
+            this.txtWithdraw.TabIndex = 11;
+            this.txtWithdraw.Visible = false;
             // 
             // button1
             // 
@@ -154,9 +154,10 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 23);
             this.button1.TabIndex = 12;
-            this.button1.Text = "Update Account";
+            this.button1.Text = "Update Amount";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1_BankingRegister
             // 
@@ -165,9 +166,9 @@
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtWithdraw);
             this.Controls.Add(this.label_withdraw);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDeposit);
             this.Controls.Add(this.label_deposit);
             this.Controls.Add(this.buttonCreateAccount);
             this.Controls.Add(this.textBoxOriginalDeposit);
@@ -196,9 +197,9 @@
         private System.Windows.Forms.TextBox textBoxOriginalDeposit;
         private System.Windows.Forms.Button buttonCreateAccount;
         private System.Windows.Forms.Label label_deposit;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDeposit;
         private System.Windows.Forms.Label label_withdraw;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtWithdraw;
         private System.Windows.Forms.Button button1;
     }
 }

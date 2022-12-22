@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BankingRegister
 {
@@ -62,9 +63,9 @@ namespace BankingRegister
         public void Withdraw(double amount)
         {
 
-            if (amount < 0 || amount == 0)
+            if (AccountBalance < 0 || AccountBalance == 0)
             {
-                Console.WriteLine("Value does not exist");
+                MessageBox.Show("No money to withdraw");
             }
             else
             {
