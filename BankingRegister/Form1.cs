@@ -12,6 +12,8 @@ namespace BankingRegister
 {
     public partial class Form1_BankingRegister : Form
     {
+        private Customer customer;
+
         public Form1_BankingRegister()
         {
             InitializeComponent();
@@ -24,80 +26,122 @@ namespace BankingRegister
 
         private void buttonCreateAccount_Click(object sender, EventArgs e)
         {
+
             int numberAccount = 0;
             string[] name = new string[2];
             double originalDeposit = 0.0;
 
-            while(int.TryParse(textBoxAccountNumber.Text, out numberAccount) == false)
+        
+            if(int.TryParse(textBoxAccountNumber.Text, out numberAccount) == false)
             {
                 MessageBox.Show("Numeric value should be entered for account number");
-                textBoxAccountNumber.Text = "0";
                 textBoxAccountNumber.Focus();
+            }
+            else
+            {
+                if(numberAccount <= 0 )
+                {
+                    textBoxAccountNumber.Text = "Value greater than 0";
+                    textBoxAccountNumber.Focus();
+                }
             }
             if(double.TryParse(textBoxOriginalDeposit.Text, out originalDeposit) == false)
             {
                 MessageBox.Show("Numeric value should be entered for deposit");
-                textBoxOriginalDeposit.Text = "0";
+                textBoxOriginalDeposit.Text = "Value greater than 0";
                 textBoxOriginalDeposit.Focus();
-            }
-            name = textBoxName.Text.Split(' ');
-            if(name.Length < 2)
-            {
-                textBoxName.Text = "Please enter full name";
-                textBoxName.Focus();
             }
             else
             {
-                if(numberAccount > 0)
+                if (originalDeposit <= 0)
                 {
-                    Customer customer = new Customer(name[0], name[1], numberAccount, originalDeposit);
-                    
+                    textBoxOriginalDeposit.Text = "Value greater than 0";
+                    textBoxOriginalDeposit.Focus();
                 }
             }
-            //full name
-            //var name = textBoxName.Text;
-            //var fullName = name.Split(' ');
-            //string firstName = fullName[0];
-            //string lastName = fullName[1];
 
-            //account number
-            //int amount = 0;
-            //while (int.TryParse(textBoxAccountNumber.Text, out amount) == false)
-            //{
-            //    MessageBox.Show("Invalid input, enter value again");
-            //    textBoxAccountNumber.Focus();
-            //}
+            name = textBoxName.Text.Split(' ');
+            if(name.Length < 2)
+            {
+                MessageBox.Show("Enter full name");
+                //textBoxName.Text = "Please enter full name";
+                textBoxName.Focus();                
+            }
+            
+            if (numberAccount > 0 && originalDeposit > 0 && name.Length >= 2)
+            {
+               label_deposit.Visible = true;
+               txtDeposit.Visible = true;
+               label_withdraw.Visible = true;
+               txtWithdraw.Visible = true;
+               button1.Visible = true;
+            }
 
-            //original deposit
-            //double originalDeposit = 0.0;
-            //while (double.TryParse(textBoxOriginalDeposit.Text, out originalDeposit) == false)
-            //{
-            //    MessageBox.Show("Invalid input, enter value again");
-            //    textBoxAccountNumber.Focus();
-            //}
+            
+            if(name.Length > 1)
+            {
+                customer = new Customer(name[0], name[1], numberAccount, originalDeposit);
+            }
+                
 
-            //textBox3.Text = obj.FirstName + " " + obj.LastName;
-            //textBox3.Text = textBoxName.Text;
-            //textBox3.Visible = true;
+        }       
 
-            //int x;
-            //if(int.TryParse(textBox4.Text, out x) == false)
-            //{
-            //    MessageBox.Show("invalid input, re-enter a value again");
-            //    textBox4.Focus();
-            //}
+       
 
+        private void button1_Click(object sender, EventArgs e)
+        {
 
-            //textBox3.Text = textBoxName.Text;
-            //textBox3.Visible = true;
+            double amountDeposit;
+            
+            if (double.TryParse(txtDeposit.Text, out amountDeposit) == false && !string.IsNullOrWhiteSpace(txtDeposit.Text))
+            {
+                MessageBox.Show("Enter a number");
+                txtDeposit.Text = "Value greater than 0";
+                txtDeposit.Focus();
+            }
+            else
+            {
+                if (amountDeposit < 0)
+                {
+                    txtDeposit.Text = "Enter a number greater than 0";
+                    txtDeposit.Focus();
+                }
+            }
 
-            //textBox4.Text = textBoxAccountNumber.Text;
-            //textBox4.Visible = true;
+            double amountWithdraw;
 
-            //textBox5.Text = (textBoxOriginalDeposit.Text);
-            //textBox5.Visible = true;
+            if (double.TryParse(txtWithdraw.Text, out amountWithdraw) == false && !string.IsNullOrWhiteSpace(txtWithdraw.Text))
+            {
+                MessageBox.Show("Enter a number");
+                txtWithdraw.Text = "Value greater than 0";
+                txtWithdraw.Focus();
+            }
+            else
+            {
+                if (amountWithdraw < 0)
+                {
+                    txtWithdraw.Text = "Enter a number greater than 0";
+                    txtWithdraw.Focus();
+                }
+            }
+            
+            if(amountDeposit > 0)
+            {
+                customer.Deposit(amountDeposit);
+                updateBalance();
+            }
 
-
+            if (amountWithdraw > 0)
+            {
+                customer.Withdraw(amountWithdraw);
+                updateBalance();
+            }
         }
+
+        private void updateBalance()
+        {
+            textBoxOriginalDeposit.Text = customer.AccountBalance.ToString();
+        }
+
     }
 }
